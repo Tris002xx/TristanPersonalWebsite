@@ -2,6 +2,7 @@
 import "./App.css";
 import Header from "../components/Header";
 import AboutMe from "../components/AboutMe";
+import Landing from "../components/Landing";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import ContactMe from "../components/ContactMe";
@@ -11,11 +12,12 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <AboutMe></AboutMe>
+      {/* <Header></Header> */}
+      <Landing></Landing>
+      {/* <AboutMe></AboutMe>
       <Projects></Projects>
       <Skills></Skills>
-      <ContactMe></ContactMe>
+      <ContactMe></ContactMe> */}
 
       {/* <div>
         <a href="https://vite.dev" target="_blank">
