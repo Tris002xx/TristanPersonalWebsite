@@ -2,14 +2,15 @@ import Project from "./Project";
 import { useState } from "react";
 
 const picturesChess: string[] = [
-  "../src/assets/chess.jpg",
-  "../src/assets/chess_two.jpg",
+  "../src/assets/crop_chess.jpg",
+  "../src/assets/2025-06-12 16-22-55.mp4",
+  // "../src/assets/chess_two.jpg",
   "../src/assets/chess_three.jpg",
   "../src/assets/chess_four.jpg",
 ];
 
 const picturesThreadit: string[] = [
-  "../src/assets/threadit.jpg",
+  "../src/assets/crop.jpg",
   "../src/assets/threadit_two.jpg",
   "../src/assets/threadit_three.jpg",
   "../src/assets/threadit_four.jpg",

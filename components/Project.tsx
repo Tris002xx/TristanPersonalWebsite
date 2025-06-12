@@ -13,8 +13,8 @@ const Project = ({
   title,
   pictures,
   descriptions,
-  references,
-}: ProjectProps) => {
+}: // references,
+ProjectProps) => {
   const [currentPicture, setCurrentPicture] = useState(0);
   const [animateDirection, setAnimateDirection] = useState("");
 
@@ -35,9 +35,10 @@ const Project = ({
   };
 
   return (
-    <div className="flex flex-col gap-10 animate-fade-up max-w-3xl m-auto p-4">
+    // <div className="flex flex-col gap-10 animate-fade-up max-w-3xl m-auto p-4">
+    <div className="flex flex-col gap-10 animate-fade-up max-w-[1600px] m-auto p-4">
       <div className="flex flex-col border-b-1 p-4 gap-4 border-gray-300">
-        <menu className="flex justify-start gap-10">
+        {/* <menu className="flex justify-start gap-10">
           <a
             href={`https://github.com/${references[0]}`}
             className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
@@ -54,25 +55,34 @@ const Project = ({
             </svg>
             {references[0]}
           </a>
-          {/* <a
+          <a
             href="https://tris002xx.github.io/chess/"
             className="text-gray-400 text-xl hover:text-black"
           >
             Try
-          </a> */}
-        </menu>
+          </a>
+        </menu> */}
         <h1 className="space-grotesk-h1 text-4xl p-2 md:text-6xl">{title}</h1>
-        <div className="flex flex-col items-center gap-4">
-          <div className="flex flex-col gap-2">
-            <img
-              src={pictures[currentPicture]}
-              alt={title + " project image " + (currentPicture + 1)}
-              className={twMerge(
-                "object-fit bg-gray-100 p-4 w-[200px] md:w-[500px]",
-                animateDirection
-              )}
-              onAnimationEnd={handleAnimationEnd}
-            />
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          <div className="flex flex-col">
+            {pictures[currentPicture].toLowerCase().endsWith(".mp4") ? (
+              <video width="200" height="1600" controls>
+                <source
+                  src={pictures[currentPicture]}
+                  type="video/mp4"
+                ></source>
+              </video>
+            ) : (
+              <img
+                src={pictures[currentPicture]}
+                alt={title + " project image " + (currentPicture + 1)}
+                className={twMerge(
+                  " bg-gray-100 p-4 w-[200px] md:w-[1600px]",
+                  animateDirection
+                )}
+                onAnimationEnd={handleAnimationEnd}
+              />
+            )}
             <div className="flex justify-center gap-4">
               {pictures.map((_, idx) => (
                 <button
@@ -81,10 +91,10 @@ const Project = ({
                   className={
                     currentPicture === idx
                       ? twMerge(
-                          "rounded-4xl w-5 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400",
+                          "rounded-4xl w-5 m-2 mt-4 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400",
                           "animate-pulse bg-gray-400"
                         )
-                      : "rounded-4xl w-5 bg-gray-200 text-gray-200 hover:bg-gray-400 w-8 hover:text-gray-400"
+                      : "rounded-4xl w-5 m-2 mt-4 bg-gray-200 text-gray-200 hover:bg-gray-400 w-8 hover:text-gray-400"
                   }
                   onClick={() => setCurrentPictureWithAnimate(idx)}
                 >
