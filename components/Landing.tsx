@@ -6,8 +6,10 @@ const Landing = () => {
       </h1>
       <h2 className="space-grotesk-p md:text-2xl">
         A fresh Computer Science Graduate 💻 from{" "}
-        <a href="" className="hover:text-blue">
-          {" "}
+        <a
+          href="https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/"
+          className="bg-gray-100 p-1 rounded-xl hover:bg-gray-200"
+        >
           British Columbia Institute of Technology
         </a>
       </h2>
@@ -60,6 +62,12 @@ const Landing = () => {
           Phone
         </a>
       </nav>
+
+      <img
+        src="../src/assets/profile.jfif"
+        alt="profile picture"
+        className="w-100 m-auto rounded-3xl animate-jump-in animate-delay-300 animate-once animate-duration-1500"
+      />
     </div>
   );
 };

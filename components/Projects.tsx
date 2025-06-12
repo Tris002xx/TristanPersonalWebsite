@@ -1,7 +1,5 @@
-// import { useState } from "react";
-// import { twMerge } from "tailwind-merge";
-
 import Project from "./Project";
+import { useState } from "react";
 
 const picturesChess: string[] = [
   "../src/assets/chess.jpg",
@@ -10,152 +8,82 @@ const picturesChess: string[] = [
   "../src/assets/chess_four.jpg",
 ];
 
+const picturesThreadit: string[] = [
+  "../src/assets/threadit.jpg",
+  "../src/assets/threadit_two.jpg",
+  "../src/assets/threadit_three.jpg",
+  "../src/assets/threadit_four.jpg",
+];
+
 const projectItems = [
   {
-    id: "1",
+    id: "0",
     title: "Chess",
     pictures: picturesChess,
-    descriptionOne:
+    descriptions: [
       "My first coding project. I did this project between my first and second semester at BCIT.",
-    descriptionTwo:
       "We had only worked with Python at the time and JavaScript syntax scared me so I challenged myself to create a functional chess web app.",
+    ],
+    references: ["Tris002xx/chess"],
   },
   {
     id: "1",
-    title: "Chess",
-    pictures: picturesChess,
-    descriptionOne:
-      "My first coding project. I did this project between my first and second semester at BCIT.",
-    descriptionTwo:
-      "We had only worked with Python at the time and JavaScript syntax scared me so I challenged myself to create a functional chess web app.",
+    title: "Reddit-Clone",
+    pictures: picturesThreadit,
+    descriptions: [
+      "A reddit clone showed me how to develop a full stack application with CRUD capabilities, authentication and database querying.",
+      "The most challenging part for me was implementing nested comments.",
+      "Written in JavaScript with EJS for dynamic front end rendering and Express for HTTP routing!",
+    ],
+    references: ["Tris002xx/Threadit"],
   },
 ];
-const Projects = () => {
-  return projectItems.map((projectItem) => (
-    <Project
-      id={projectItem.id}
-      title={projectItem.title}
-      pictures={projectItem.pictures}
-      descriptionOne={projectItem.descriptionOne}
-      descriptionTwo={projectItem.descriptionTwo}
-    ></Project>
-  ));
-  //   <div className="flex flex-col gap-10 animate-fade-up max-w-3xl m-auto p-4">
-  //     <div className="flex flex-col border-b-1 p-4 gap-4 border-gray-300">
-  //       <h1 className="space-grotesk-h1 text-4xl p-2 md:text-6xl">Chess</h1>
-  //       <div className="flex flex-col md:flex-row items-center gap-4">
-  //         <div className="flex flex-col gap-2">
-  //           <img
-  //             src={
-  //               currentPicture == 0
-  //                 ? pictures[0]
-  //                 : currentPicture == 1
-  //                 ? pictures[1]
-  //                 : currentPicture == 2
-  //                 ? pictures[2]
-  //                 : pictures[3]
-  //             }
-  //             alt="chess"
-  //             className={twMerge(
-  //               "w-[500px] object-cover md:w-[2000px] md:h-[500px]",
-  //               animateDirection
-  //             )}
-  //           />
-  //           <div className="flex justify-center gap-4">
-  //             <button
-  //               className={
-  //                 currentPicture == 0
-  //                   ? twMerge(
-  //                       "rounded-4xl w-5 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400",
-  //                       "animate-pulse bg-gray-400"
-  //                     )
-  //                   : "rounded-4xl w-5 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400"
-  //               }
-  //               onClick={() => setCurrentPictureWithAnimate(0)}
-  //             >
-  //               {"."}
-  //             </button>
-  //             <button
-  //               className={
-  //                 currentPicture == 1
-  //                   ? twMerge(
-  //                       "rounded-4xl w-5 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400",
-  //                       "animate-pulse bg-gray-400"
-  //                     )
-  //                   : "rounded-4xl w-5 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400"
-  //               }
-  //               onClick={() => setCurrentPictureWithAnimate(1)}
-  //             >
-  //               {"."}
-  //             </button>
-  //             <button
-  //               className={
-  //                 currentPicture == 2
-  //                   ? twMerge(
-  //                       "rounded-4xl w-5 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400",
-  //                       "animate-pulse bg-gray-400"
-  //                     )
-  //                   : "rounded-4xl w-5 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400"
-  //               }
-  //               onClick={() => setCurrentPictureWithAnimate(2)}
-  //             >
-  //               {"."}
-  //             </button>
-  //             <button
-  //               className={
-  //                 currentPicture == 3
-  //                   ? twMerge(
-  //                       "rounded-4xl w-5 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400",
-  //                       "animate-pulse bg-gray-400"
-  //                     )
-  //                   : "rounded-4xl w-5 bg-gray-200 hover:bg-gray-400 w-8 text-gray-400"
-  //               }
-  //               onClick={() => setCurrentPictureWithAnimate(3)}
-  //             >
-  //               {"."}
-  //             </button>
-  //           </div>
-  //         </div>
 
-  //         <section>
-  //           <p className="space-grotesk-p p-2 md:text-2xl text-start">
-  //             My first coding project. I did this project between my first and
-  //             second semester at BCIT.
-  //           </p>
-  //           <p className="space-grotesk-p p-2 md:text-2xl text-start">
-  //             We had only worked with Python at the time and JavaScript syntax
-  //             scared me so I challenged myself to create a functional chess web
-  //             app.
-  //           </p>
-  //         </section>
-  //       </div>
-  //       <menu className="flex justify-center gap-20">
-  //         <a
-  //           href="https://github.com/Tris002xx/chess"
-  //           className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
-  //         >
-  //           <svg
-  //             xmlns="http://www.w3.org/2000/svg"
-  //             x="0px"
-  //             y="0px"
-  //             width="30"
-  //             height="30"
-  //             viewBox="0 0 30 30"
-  //           >
-  //             <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"></path>
-  //           </svg>
-  //           Tris002xx/chess
-  //         </a>
-  //         <a
-  //           href="https://tris002xx.github.io/chess/"
-  //           className="text-gray-400 text-xl hover:text-black"
-  //         >
-  //           Try
-  //         </a>
-  //       </menu>
-  //     </div>
-  //   </div>
-  // );
+const Projects = () => {
+  const [currentPage, setCurrentPage] = useState(projectItems[0]);
+  return (
+    <section className="flex flex-col gap-4 p-4">
+      {
+        <Project
+          key={currentPage.id}
+          id={currentPage.id}
+          title={currentPage.title}
+          pictures={currentPage.pictures}
+          descriptions={currentPage.descriptions}
+          references={currentPage.references}
+        ></Project>
+      }
+      <menu className="flex justify-center gap-4">
+        <button
+          className="bg-gray-200 rounded-2xl p-2 hover:bg-gray-400 space-grotesk-p p-2 md:text-2xl text-start"
+          onClick={() => {
+            if (Number(currentPage.id) - 1 >= 0)
+              setCurrentPage(projectItems[Number(currentPage.id) - 1]);
+          }}
+        >
+          <img
+            className="w-[18px] h-[18px] md:w-[24px] md:h-[24px]"
+            src="https://img.icons8.com/fluency-systems-regular/48/long-arrow-left.png"
+            alt="long-arrow-left"
+          />
+        </button>
+        <button
+          className="bg-gray-200 rounded-2xl p-2 hover:bg-gray-400 space-grotesk-p p-2 md:text-2xl text-start"
+          onClick={() => {
+            if (Number(currentPage.id) + 1 < projectItems.length) {
+              setCurrentPage(projectItems[Number(currentPage.id) + 1]);
+            }
+          }}
+        >
+          <img
+            className="w-[18px] h-[18px] md:w-[24px] md:h-[24px]"
+            src="https://img.icons8.com/fluency-systems-regular/48/long-arrow-right.png"
+            alt="long-arrow-right"
+          />
+        </button>
+      </menu>
+    </section>
+  );
 };
 
 export default Projects;
