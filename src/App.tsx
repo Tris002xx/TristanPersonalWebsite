@@ -15,11 +15,11 @@ function App() {
   const togglePage = (
     newPage: "Landing" | "AboutMe" | "Projects" | "Skills" | "ContactMe"
   ) => {
-    setPage((prev) => (prev = newPage));
+    setPage((_prev) => (_prev = newPage));
   };
   return (
     <>
-      <Header pageChanger={togglePage}></Header>
+      <Header pageChanger={togglePage} currentPage={page}></Header>
       {page == "Landing" ? (
         <Landing></Landing>
       ) : page == "AboutMe" ? (

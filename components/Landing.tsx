@@ -15,7 +15,7 @@ const Landing = () => {
       <nav className="p-2 m-auto flex flex-col gap-2 md:flex-row">
         <a
           href=""
-          className="space-grotesk-a text-gray-400 hover:text-black flex"
+          className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const Landing = () => {
         </a>
         <a
           href=""
-          className="space-grotesk-a text-gray-400 hover:text-black flex"
+          className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,14 +47,14 @@ const Landing = () => {
         </a>
         <a
           href=""
-          className="space-grotesk-a text-gray-400 hover:text-black flex"
+          className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
         >
           <span className="w-[30px]">📨</span>
           Email
         </a>
         <a
           href=""
-          className="space-grotesk-a text-gray-400 hover:text-black flex"
+          className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
         >
           <span className="w-[30px]">📱</span>
           Phone
