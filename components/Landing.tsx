@@ -62,7 +62,7 @@ const Landing = () => {
       </nav>
 
       <img
-        src="../src/assets/profile.jfif"
+        src="/profile.jfif"
         alt="profile picture"
         className="w-[150px] md:w-100 m-auto rounded-3xl animate-jump-in animate-delay-300 animate-once animate-duration-1500"
       />

@@ -1,15 +1,9 @@
 import Project from "./Project";
 import { useState } from "react";
 
-const picturesChess: string[] = [
-  "../src/assets/crop_chess.jpg",
-  "../src/assets/2025-06-12 16-22-55.mp4",
-];
+const picturesChess: string[] = ["/crop_chess.JPG", "/2025-06-12 16-22-55.mp4"];
 
-const picturesThreadit: string[] = [
-  "../src/assets/crop.jpg",
-  "../src/assets/2025-06-12 17-31-01.mp4",
-];
+const picturesThreadit: string[] = ["/crop.JPG", "/2025-06-12 17-31-01.mp4"];
 
 const projectItems = [
   {
