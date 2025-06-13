@@ -16,7 +16,7 @@ const Landing = () => {
 
       <nav className=" grid grid-cols-2 md:flex p-2 m-auto md:flex-col gap-2 md:flex-row">
         <a
-          href=""
+          href="https://github.com/Tris002xx"
           className="space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
         >
           <svg
@@ -31,7 +31,7 @@ const Landing = () => {
           GitHub
         </a>
         <a
-          href=""
+          href="https://www.linkedin.com/in/tristan-james-torres/"
           className="space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
         >
           <svg
@@ -46,14 +46,14 @@ const Landing = () => {
           LinkedIn
         </a>
         <a
-          href=""
+          href="mailto:tristanjames3131@gmail.com"
           className="space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
         >
           <span className="w-[30px]">📨</span>
           Email
         </a>
         <a
-          href=""
+          href="tel:+17789523531"
           className="space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
         >
           <span className="w-[30px]">📱</span>
