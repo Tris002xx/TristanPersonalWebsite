@@ -1,20 +1,22 @@
 const AboutMe = () => {
   return (
-    <div className="animate-fade-up flex flex-col gap-10 animate-fade-up max-w-3xl m-auto p-4">
+    <div className="animate-fade-up flex flex-col gap-10 animate-fade-up max-w-7xl m-auto p-4">
       <section className="p-2">
         <h1 className="text-4xl space-grotesk-h1 md:text-6xl text-start">
           Profile 👀
         </h1>
         <p className="space-grotesk-p md:text-2xl text-start">
           Hi, I'm <span className="font-medium">Tristan James Torres</span>. I
-          appreciate you for checking out my portfolio! As a BCIT Computer
-          Information Technology Graduate, I've been trained to do everything
-          IT. We had courses involving troubleshooting and administering
-          hardware, general software development and DevOps.
+          appreciate you for checking out my portfolio! As a{" "}
+          <span className="font-medium text-blue-600">
+            BCIT Computer Information Technology Graduate,
+          </span>{" "}
+          I've been trained to do everything IT. We had courses involving{" "}
+          <span className="">
+            troubleshooting and administering hardware, general software
+            development and DevOps.
+          </span>
         </p>
-        <section className="flex justify-center">
-          {/* <img src="../src/assets/64px-BCIT_logo.svg.png" alt="BCIT Logo" /> */}
-        </section>
       </section>
       <section className="p-2">
         <h1 className="text-4xl space-grotesk-h1 md:text-6xl text-start">
@@ -23,9 +25,9 @@ const AboutMe = () => {
         <p className="space-grotesk-p md:text-2xl text-start">
           I'm a passionate software developer with an interest in web
           development. Currently, I am experimenting with front-end technologies
-          such as
+          such as;
         </p>
-        <span className="font-medium space-grotesk-p md:text-2xl text-start gap-5">
+        <section className="font-medium space-grotesk-p md:text-2xl text-start gap-5">
           <span className="p-5">
             <svg
               className="inline"
@@ -99,7 +101,7 @@ const AboutMe = () => {
               />
             </svg>
           </span>
-        </span>
+        </section>
       </section>
 
       <section className="p-2">
