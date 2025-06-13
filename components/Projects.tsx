@@ -3,12 +3,12 @@ import { useState } from "react";
 
 const picturesChess: string[] = [
   "/TristanPersonalWebsite/crop_chess.JPG",
-  "/2025-06-12 16-22-55.mp4",
+  "/TristanPersonalWebsute/2025-06-12 16-22-55.mp4",
 ];
 
 const picturesThreadit: string[] = [
   "/TristanPersonalWebsite/crop.JPG",
-  "/2025-06-12 17-31-01.mp4",
+  "/TristanPersonalWebsute/2025-06-12 17-31-01.mp4",
 ];
 
 const projectItems = [
