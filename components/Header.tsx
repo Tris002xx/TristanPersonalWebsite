@@ -96,7 +96,7 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
             Skills
           </button>
         </li>
-        <li>
+        {/* <li>
           <button
             onClick={() => pageChanger("ContactMe")}
             className={
@@ -110,7 +110,7 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
           >
             Contact me
           </button>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

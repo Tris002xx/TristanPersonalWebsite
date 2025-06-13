@@ -1,10 +1,10 @@
 const Landing = () => {
   return (
-    <div className="flex flex-col p-20 gap-2 animate-fade-up">
-      <h1 className="text-4xl space-grotesk-h1 md:text-6xl">
+    <div className="flex flex-col p-10 md:p-20 gap-2 max-w-7xl m-auto animate-fade-up">
+      <h1 className="text-xl space-grotesk-h1 md:text-6xl">
         Hello, I'm Tristan James Torres!
       </h1>
-      <h2 className="space-grotesk-p md:text-2xl">
+      <h2 className="space-grotesk-p text-sm md:text-2xl">
         A fresh Computer Science Graduate 💻 from{" "}
         <a
           href="https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/"
@@ -14,15 +14,14 @@ const Landing = () => {
         </a>
       </h2>
 
-      <nav className="p-2 m-auto flex flex-col gap-2 md:flex-row">
+      <nav className=" grid grid-cols-2 md:flex p-2 m-auto md:flex-col gap-2 md:flex-row">
         <a
           href=""
-          className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
+          className="space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
         >
           <svg
+            className="md:w-[30px]"
             xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
             width="30"
             height="30"
             viewBox="0 0 30 30"
@@ -33,12 +32,11 @@ const Landing = () => {
         </a>
         <a
           href=""
-          className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
+          className="space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
         >
           <svg
+            className="md:w-[30px]"
             xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
             width="30"
             height="30"
             viewBox="0 0 30 30"
@@ -49,14 +47,14 @@ const Landing = () => {
         </a>
         <a
           href=""
-          className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
+          className="space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
         >
           <span className="w-[30px]">📨</span>
           Email
         </a>
         <a
           href=""
-          className="space-grotesk-a text-gray-400 text-xl hover:text-black flex"
+          className="space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
         >
           <span className="w-[30px]">📱</span>
           Phone
@@ -66,7 +64,7 @@ const Landing = () => {
       <img
         src="../src/assets/profile.jfif"
         alt="profile picture"
-        className="w-100 m-auto rounded-3xl animate-jump-in animate-delay-300 animate-once animate-duration-1500"
+        className="w-[150px] md:w-100 m-auto rounded-3xl animate-jump-in animate-delay-300 animate-once animate-duration-1500"
       />
     </div>
   );

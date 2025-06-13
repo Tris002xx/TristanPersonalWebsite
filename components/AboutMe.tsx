@@ -1,11 +1,9 @@
 const AboutMe = () => {
   return (
-    <div className="animate-fade-up flex flex-col gap-10 animate-fade-up max-w-7xl m-auto p-4">
+    <div className="animate-fade-up flex flex-col gap-10 animate-fade-up max-w-7xl m-auto p-4 text-start ">
       <section className="p-2">
-        <h1 className="text-4xl space-grotesk-h1 md:text-6xl text-start">
-          Profile 👀
-        </h1>
-        <p className="space-grotesk-p md:text-2xl text-start">
+        <h1 className="text-4xl space-grotesk-h1 md:text-6xl">Profile 👀</h1>
+        <p className="space-grotesk-p md:text-2xl">
           Hi, I'm <span className="font-medium">Tristan James Torres</span>. I
           appreciate you for checking out my portfolio! As a{" "}
           <span className="font-medium text-blue-600">
@@ -19,15 +17,15 @@ const AboutMe = () => {
         </p>
       </section>
       <section className="p-2">
-        <h1 className="text-4xl space-grotesk-h1 md:text-6xl text-start">
+        <h1 className="text-4xl space-grotesk-h1 md:text-6xl">
           Upcoming Full-Stack Developer! 👨‍💻
         </h1>
-        <p className="space-grotesk-p md:text-2xl text-start">
+        <p className="space-grotesk-p md:text-2xl">
           I'm a passionate software developer with an interest in web
           development. Currently, I am experimenting with front-end technologies
-          such as;
+          such as:
         </p>
-        <section className="font-medium space-grotesk-p md:text-2xl text-start gap-5">
+        <section className="font-medium space-grotesk-p md:text-2xl gap-5">
           <span className="p-5">
             <svg
               className="inline"
@@ -105,10 +103,8 @@ const AboutMe = () => {
       </section>
 
       <section className="p-2">
-        <h1 className="text-4xl space-grotesk-h1 md:text-6xl text-start">
-          Interests
-        </h1>
-        <p className="space-grotesk-p md:text-2xl text-start">
+        <h1 className="text-4xl space-grotesk-h1 md:text-6xl">Interests</h1>
+        <p className="space-grotesk-p md:text-2xl">
           To keep myself from burning out 🔥, I enjoy exploring new music,
           playing video games, and watching movies. These activities help me
           recharge and stay inspired in my development journey.

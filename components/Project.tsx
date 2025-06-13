@@ -35,15 +35,16 @@ const Project = ({
   };
 
   return (
-    // <div className="flex flex-col gap-10 animate-fade-up max-w-3xl m-auto p-4">
     <div className="flex flex-col gap-10 animate-fade-up max-w-[1600px] m-auto p-4">
       <div className="flex flex-col border-b-1 p-4 gap-4 border-gray-300">
-        <h1 className="space-grotesk-h1 text-xl p-2 md:text-6xl">{title}</h1>
-        <div className="flex flex-col md:flex-row items-center gap-4">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-4">
           <div className="flex flex-col">
             {pictures[currentPicture].toLowerCase().endsWith(".mp4") ? (
               <video
-                className="bg-gray-100 p-4 w-[1000px] md:w-[1600px]"
+                className={twMerge(
+                  " bg-gray-100 p-4 w-[1000px] md:w-[1600px]",
+                  animateDirection
+                )}
                 controls
               >
                 <source
@@ -56,7 +57,7 @@ const Project = ({
                 src={pictures[currentPicture]}
                 alt={title + " project image " + (currentPicture + 1)}
                 className={twMerge(
-                  " bg-gray-100 p-4 w-[1000px] md:w-[1600px]",
+                  " bg-gray-100 p-4 w-[400px] md:w-[1600px]",
                   animateDirection
                 )}
                 onAnimationEnd={handleAnimationEnd}
@@ -84,7 +85,10 @@ const Project = ({
           </div>
 
           <section className="flex flex-col">
-            <div className="grid grid-cols-2 md:flex md:justify-start md:flex-row gap-4">
+            <h1 className="space-grotesk-h1 text-xl p-2 md:text-6xl md:text-start">
+              {title}
+            </h1>
+            <div className="grid grid-cols-5 md:flex md:justify-start md:flex-row gap-4">
               {tools.map((tool, idx) => (
                 <span key={idx}>{tool}</span>
               ))}
