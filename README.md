@@ -1,54 +1,83 @@
-# React + TypeScript + Vite
+# Tristan's Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Project showcase with images and videos
+- Animated transitions
+- Responsive design
+- Built with the latest React and Vite
 
-## Expanding the ESLint configuration
+## Getting Started (Development)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+
+### Installation
+
+1. Clone this repository:
+
+   ```sh
+   git clone <your-repo-url>
+   cd tristanwebsite
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+### Running the Development Server
+
+Start the local development server with hot reloading:
+
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- The site will be available at the URL shown in your terminal (usually http://localhost:5173).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Building for Production
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+To build the site for production:
+
+```sh
+npm run build
 ```
+
+### Previewing the Production Build
+
+To preview the production build locally:
+
+```sh
+npm run preview
+```
+
+### Linting
+
+To check for code quality and formatting issues:
+
+```sh
+npm run lint
+```
+
+## Project Structure
+
+- `src/` - Main source code
+- `components/` - React components (Project, Projects, etc.)
+- `public/` - Static assets
+- `assets/` - Images and videos used in the portfolio
+
+## Customization
+
+- Update your projects in `components/Projects.tsx`
+- Add or update images/videos in `src/assets/`
+- Customize styles in `src/App.css` and Tailwind config
+
+---
+
+Feel free to reach out or fork this project for your own use!
