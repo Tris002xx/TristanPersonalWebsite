@@ -10,11 +10,27 @@ gsap.registerPlugin(useGSAP, Flip);
 
 interface HeaderProps {
   pageChanger: (
-    newPage: "Landing" | "AboutMe" | "Projects" | "Skills" | "ContactMe"
+    newPage:
+      | "Landing"
+      | "About"
+      | "Projects"
+      | "Experience"
+      | "Skills"
+      | "Contact"
   ) => void;
 
-  currentPage: "Landing" | "AboutMe" | "Projects" | "Skills" | "ContactMe";
+  currentPage:
+    | "Landing"
+    | "About"
+    | "Projects"
+    | "Experience"
+    | "Skills"
+    | "Contact";
 }
+
+const pages: Array<
+  "Landing" | "About" | "Projects" | "Experience" | "Skills" | "Contact"
+> = ["About", "Skills", "Experience", "Projects"];
 
 const Header = ({ pageChanger, currentPage }: HeaderProps) => {
   // const [currentPage, setCurrentPage] = useState(0);
@@ -69,11 +85,29 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
           <li>
             <ThemeToggle />
           </li>
-          <li>
+          {pages.map((page, idx) => (
+            <li key={idx}>
+              <button
+                key={idx}
+                onClick={() => pageChanger(page)}
+                className={
+                  currentPage == page
+                    ? twMerge(
+                        "animate-pulse",
+                        "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
+                      )
+                    : "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
+                }
+              >
+                {page}
+              </button>
+            </li>
+          ))}
+          {/* <li>
             <button
-              onClick={() => pageChanger("AboutMe")}
+              onClick={() => pageChanger("About")}
               className={
-                currentPage == "AboutMe"
+                currentPage == "About"
                   ? twMerge(
                       "animate-pulse",
                       "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
@@ -113,22 +147,7 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
             >
               Skills
             </button>
-          </li>
-          {/* <li>
-          <button
-          onClick={() => pageChanger("ContactMe")}
-          className={
-            currentPage == "ContactMe"
-            ? twMerge(
-              "animate-pulse",
-              "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
-              )
-              : "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
-              }
-              >
-              Contact me
-              </button>
-              </li> */}
+          </li> */}
         </ul>
       </nav>
     </div>

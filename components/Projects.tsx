@@ -148,7 +148,7 @@ const Projects = () => {
           tools={currentPage.tools}
         ></Project>
       }
-      <menu className="flex justify-center gap-4">
+      <menu className="flex justify-center border-t-1 border-gray-200 dark:border-gray-600 gap-4 w-[75%] m-auto p-4">
         <button
           className="bg-gray-200 rounded-2xl p-2 hover:bg-gray-400 space-grotesk-p p-2 md:text-2xl text-start"
           onClick={() => {

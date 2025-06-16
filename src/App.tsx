@@ -2,18 +2,25 @@ import { useState } from "react";
 import "./App.css";
 import Header from "../components/Header";
 import Landing from "../components/Landing";
-import AboutMe from "../components/AboutMe";
+import About from "../components/About";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
-import ContactMe from "../components/ContactMe";
+import Contact from "../components/Contact";
+import Experience from "../components/Experience";
 
 function App() {
   const [page, setPage] = useState<
-    "Landing" | "AboutMe" | "Projects" | "Skills" | "ContactMe"
+    "Landing" | "About" | "Projects" | "Experience" | "Skills" | "Contact"
   >("Landing");
 
   const togglePage = (
-    newPage: "Landing" | "AboutMe" | "Projects" | "Skills" | "ContactMe"
+    newPage:
+      | "Landing"
+      | "About"
+      | "Projects"
+      | "Experience"
+      | "Skills"
+      | "Contact"
   ) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     setPage((_prev) => (_prev = newPage));
@@ -23,14 +30,16 @@ function App() {
       <Header pageChanger={togglePage} currentPage={page}></Header>
       {page == "Landing" ? (
         <Landing></Landing>
-      ) : page == "AboutMe" ? (
-        <AboutMe></AboutMe>
+      ) : page == "About" ? (
+        <About></About>
       ) : page == "Projects" ? (
         <Projects></Projects>
       ) : page == "Skills" ? (
         <Skills></Skills>
+      ) : page == "Experience" ? (
+        <Experience></Experience>
       ) : (
-        <ContactMe></ContactMe>
+        <Contact></Contact>
       )}
     </main>
   );

@@ -1,4 +1,4 @@
-const AboutMe = () => {
+const About = () => {
   return (
     <div className="animate-fade-up flex flex-col gap-10 animate-fade-up max-w-7xl m-auto p-4 text-start ">
       <section className="p-2">
@@ -114,4 +114,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default About;
