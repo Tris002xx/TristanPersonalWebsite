@@ -37,7 +37,7 @@ const Project = ({
   return (
     <div className="flex flex-col gap-10 animate-fade-up max-w-[1600px] m-auto p-4">
       <div className="flex flex-col border-b-1 p-4 gap-4 border-gray-300">
-        <div className="flex flex-col-reverse md:flex-row items-center gap-4">
+        <div className="flex flex-col-reverse md:flex-row-reverse items-center gap-4">
           <div className="flex flex-col">
             {pictures[currentPicture].toLowerCase().endsWith(".mp4") ? (
               <video
@@ -84,7 +84,7 @@ const Project = ({
             </div>
           </div>
 
-          <section className="flex flex-col dark:bg-gray-700 p-2">
+          <section className="flex flex-col bg-gray-100 dark:bg-gray-700 p-2">
             <h1 className="space-grotesk-h1 text-xl p-2 md:text-6xl md:text-start">
               {title}
             </h1>

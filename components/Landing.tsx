@@ -14,7 +14,7 @@ const Landing = () => {
         </a>
       </h2>
 
-      <nav className="grid grid-cols-2 md:flex p-2 m-auto md:flex-col gap-2 md:flex-row dark:bg-gray-700">
+      <nav className="grid grid-cols-2 md:flex p-2 m-auto md:flex-col gap-2 md:flex-row bg-gray-100 dark:bg-gray-700">
         <a
           href="https://github.com/Tris002xx"
           className="space-grotesk-a text-gray-400 dark:text-white md:text-xl hover:opacity-70 flex"

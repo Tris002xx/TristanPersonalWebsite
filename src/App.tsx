@@ -15,6 +15,7 @@ function App() {
   const togglePage = (
     newPage: "Landing" | "AboutMe" | "Projects" | "Skills" | "ContactMe"
   ) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     setPage((_prev) => (_prev = newPage));
   };
   return (
