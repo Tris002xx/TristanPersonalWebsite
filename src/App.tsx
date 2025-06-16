@@ -18,7 +18,7 @@ function App() {
     setPage((_prev) => (_prev = newPage));
   };
   return (
-    <>
+    <main className="dark:bg-gray-800 dark:text-white min-h-full">
       <Header pageChanger={togglePage} currentPage={page}></Header>
       {page == "Landing" ? (
         <Landing></Landing>
@@ -31,7 +31,7 @@ function App() {
       ) : (
         <ContactMe></ContactMe>
       )}
-    </>
+    </main>
   );
 }
 

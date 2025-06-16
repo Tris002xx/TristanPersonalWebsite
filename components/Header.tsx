@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Flip } from "gsap/Flip";
 
+import ThemeToggle from "./ThemeToggle";
+
 gsap.registerPlugin(useGSAP, Flip);
 
 interface HeaderProps {
@@ -27,7 +29,7 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
 
   return (
     <div ref={container}>
-      <nav className="box flex flex-col justify-between border-b-1 border-gray-200 p-2 gap-2 md:flex-row">
+      <nav className="box flex flex-col justify-between border-b-1 border-gray-200 dark:border-gray-600 p-2 gap-2 md:flex-row">
         <div className="flex justify-between">
           <button onClick={() => pageChanger("Landing")}>
             <h1
@@ -35,9 +37,9 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
                 currentPage == "Landing"
                   ? twMerge(
                       "animate-pulse",
-                      "flex justify-between space-grotesk-h1 text-gray-400 md:text-xl hover:text-black"
+                      "flex justify-between space-grotesk-h1 dark:text-white md:text-xl p-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 flex"
                     )
-                  : "flex justify-between space-grotesk-h1 text-gray-400 md:text-xl hover:text-black"
+                  : "flex justify-between space-grotesk-h1 dark:text-white md:text-xl p-2 hover:bg-gray-300 dark:hover:bg-gray-700 flex"
               }
             >
               Tristan J Torres
@@ -48,7 +50,7 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
               setNavState((prev) => !prev);
             }}
           >
-            <h1 className="flex justify-between space-grotesk-h1 text-gray-400 md:text-xl hover:text-black md:hidden">
+            <h1 className="flex justify-between space-grotesk-h1 dark:text-white md:text-xl md:hidden p-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 flex">
               Open
             </h1>
           </button>
@@ -65,15 +67,18 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
           }
         >
           <li>
+            <ThemeToggle />
+          </li>
+          <li>
             <button
               onClick={() => pageChanger("AboutMe")}
               className={
                 currentPage == "AboutMe"
                   ? twMerge(
                       "animate-pulse",
-                      "space-grotesk-a text-gray-600 md:text-xl hover:text-black flex"
+                      "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
                     )
-                  : "space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
+                  : "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
               }
             >
               About me
@@ -86,9 +91,9 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
                 currentPage == "Projects"
                   ? twMerge(
                       "animate-pulse",
-                      "space-grotesk-a text-gray-600 md:text-xl hover:text-black flex"
+                      "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
                     )
-                  : "space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
+                  : "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
               }
             >
               Projects
@@ -101,9 +106,9 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
                 currentPage == "Skills"
                   ? twMerge(
                       "animate-pulse",
-                      "space-grotesk-a text-gray-600 md:text-xl hover:text-black flex"
+                      "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
                     )
-                  : "space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
+                  : "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
               }
             >
               Skills
@@ -116,9 +121,9 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
             currentPage == "ContactMe"
             ? twMerge(
               "animate-pulse",
-              "space-grotesk-a text-gray-600 md:text-xl hover:text-black flex"
+              "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
               )
-              : "space-grotesk-a text-gray-400 md:text-xl hover:text-black flex"
+              : "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
               }
               >
               Contact me

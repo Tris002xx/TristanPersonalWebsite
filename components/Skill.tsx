@@ -11,7 +11,7 @@ const Skill = ({ title, tools }: SkillProps) => {
         {tools.map((tool, idx) => (
           <div
             key={idx}
-            className="flex flex-col w-15 text-center md:w-25 hover:animate-pulse"
+            className="flex flex-col w-15 text-center md:w-25 hover:animate-pulse "
           >
             {tool.icon}
             <p className="space-grotesk-p text-xs md:text-xl">
