@@ -103,51 +103,6 @@ const Header = ({ pageChanger, currentPage }: HeaderProps) => {
               </button>
             </li>
           ))}
-          {/* <li>
-            <button
-              onClick={() => pageChanger("About")}
-              className={
-                currentPage == "About"
-                  ? twMerge(
-                      "animate-pulse",
-                      "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
-                    )
-                  : "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
-              }
-            >
-              About me
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => pageChanger("Projects")}
-              className={
-                currentPage == "Projects"
-                  ? twMerge(
-                      "animate-pulse",
-                      "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
-                    )
-                  : "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
-              }
-            >
-              Projects
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => pageChanger("Skills")}
-              className={
-                currentPage == "Skills"
-                  ? twMerge(
-                      "animate-pulse",
-                      "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
-                    )
-                  : "space-grotesk-a text-gray-800 dark:text-gray-200 px-4 py-2 rounded md:text-xl hover:bg-gray-300 dark:hover:bg-gray-700 flex"
-              }
-            >
-              Skills
-            </button>
-          </li> */}
         </ul>
       </nav>
     </div>
